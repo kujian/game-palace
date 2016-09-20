@@ -1,0 +1,230 @@
+/**
+ * @require reset
+ */
+.animated, .palace .part {
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+.palace .part{
+ -webkit-animation-duration: 2s;
+         animation-duration: 2s;
+}
+.animated.infinite {
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.animated.hinge {
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+/*.bounceIn{
+-webkit-animation:bounceIn 2s .3s ease both;
+-moz-animation:bounceIn 2s .3s ease both;}
+@-webkit-keyframes bounceIn{
+0%{opacity:0;
+-webkit-transform:scale(.3)}
+20%{opacity:1;
+-webkit-transform:scale(1.05)}
+40%{-webkit-transform:scale(.9); opacity: 0.9;}
+60%{-webkit-transform:scale(1); opacity: 1;}
+80%{-webkit-transform:scale(.9); opacity: 0.9;}
+100%{-webkit-transform:scale(1); opacity: 1;}
+}
+@-moz-keyframes bounceIn{
+0%{opacity:0;
+-webkit-transform:scale(.3)}
+20%{opacity:1;
+-webkit-transform:scale(1.05)}
+40%{-webkit-transform:scale(.9); opacity: 0.9;}
+60%{-webkit-transform:scale(1); opacity: 1;}
+80%{-webkit-transform:scale(.9); opacity: 0.9;}
+100%{-webkit-transform:scale(1); opacity: 1;}
+}*/
+
+@-webkit-keyframes bounceInDown {
+  from, 60%, 75%, 90%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+            animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -3000px, 0);
+            transform: translate3d(0, -3000px, 0);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 25px, 0);
+            transform: translate3d(0, 25px, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(0, -10px, 0);
+            transform: translate3d(0, -10px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0, 5px, 0);
+            transform: translate3d(0, 5px, 0);
+  }
+
+  to {
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@keyframes bounceInDown {
+  from, 60%, 75%, 90%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+            animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -3000px, 0);
+            transform: translate3d(0, -3000px, 0);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 25px, 0);
+            transform: translate3d(0, 25px, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(0, -10px, 0);
+            transform: translate3d(0, -10px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0, 5px, 0);
+            transform: translate3d(0, 5px, 0);
+  }
+
+  to {
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+.bounceInDown {
+  -webkit-animation-name: bounceInDown;
+          animation-name: bounceInDown;
+}
+
+@-webkit-keyframes flash {
+  from, 50%, to {
+    opacity: 1;
+  }
+
+  25%, 75% {
+    opacity: 0.4;
+  }
+}
+
+@keyframes flash {
+  from, 50%, to {
+    opacity: 1;
+  }
+
+  25%, 75% {
+    opacity: 0.4;
+  }
+}
+
+.flash {
+  -webkit-animation-name: flash;
+          animation-name: flash;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+.restart{position: absolute; left: 0; z-index: 100; top: 0;}
+  .palace{overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+/*  width: 1136px;*/
+  background: #000;
+  }
+  /*.palace{position:relative; left:0; top:0; height: 100%; width: 100%; min-width:1280px; overflow-x:auto;}*/
+  .palace:before{display: block; content: ""; width: 100%;  height: 100%; position: absolute; left: 0; top: 0; z-index: 2; 
+  moz-user-select: -moz-none; 
+  -moz-user-select: none; 
+  -o-user-select:none;
+  -webkit-user-select:none;
+  -ms-user-select:none; 
+  user-select:none;}
+
+  .palace-logo{display: none;}
+  .palace .bd{position: relative;  width:1136px; margin: 0 auto; overflow: hidden;}
+  /*.palace{min-width: 1280px;}*/
+  .palace .part{position: absolute; visibility: hidden; z-index: 2; opacity: 0; }
+  .palace .part img{max-width: 100%; height: auto;}
+  .palace .pos .active{opacity: 1; cursor: pointer; visibility: visible; display: block;}
+
+  .palace .part:before{position: absolute; z-index: 4; content: ""; display: block; width: 100%; height: 100%;}
+  /*.palace .p1{width: 52px; height: 196px; left: 934px; top:123px;}*/
+  /*剑*/
+  .palace .p1{width:2.7083%; height: 20.4167%; left:48.6458%; top:12.8125%; }
+  /*.palace .p2{width: 140px; height: 202px; left:407px; top: 108px;}*/
+  /*楼上油画*/
+  .palace .p2{width: 7.29167%; height: 21.0417%; left: 21.1979%; top: 11.25%}
+  /*.palace .p3{width: 81px; height: 152px; left:1268px; top:539px; }*/
+  /*大盾牌*/
+  .palace .p3{width: 4.21875%; height: 15.8333%; left: 66.0417%; top: 56.1458%;}
+  /*.palace .p4{width: 77px; height: 153px; left:699px; top:157px;}*/
+  /*小盾牌*/
+  .palace .p4{width: 4.01042%; height: 15.9375%; left: 36.4063%; top: 16.3542%;}
+  /*.palace .p5{width: 113px; height: 373px; left: 294px; top:240px;}*/
+  /*灯奴*/
+  .palace .p5{width:5.88542%; height: 38.8542%; left: 15.3125%; top: 25%;}
+  /*.palace .p6{width: 132px; height: 290px; left:1605px; top:553px;}*/
+  /*油画*/
+  .palace .p6{width: 6.875%; height: 30.2083%; left: 83.5938%; top: 57.6042%;}
+  /*.palace .p7{width: 147px; height: 153px; left: 260px; top: 641px;}*/
+  /*狮子*/
+  .palace .p7{width: 7.65625%; height: 15.9375%; left: 13.5417%; top: 66.7708%;}
+
+  .palace .pos .isClick{text-align: center; z-index: 3; cursor: default; }
+  .palace .pos .isClick img{max-height: 100%; width: auto; height: auto; position: absolute; left: 50%; top: 50%; -webkit-transform:translate(-50%, -50%); transform:translate(-50%, -50%); }
+  .palace .pos .p1.isClick img{-webkit-transform:rotate(45deg);transform:rotate(45deg); left: auto; top: auto; position: static;}
+  .palace .pos .p2.isClick img{max-width: 28px;}
+  .palace .pos .p3.isClick img{max-width: 26px;}
+  .palace .pos .p4.isClick img{max-width: 28px;}
+  .palace .pos .p5.isClick img{max-width: 16px;}
+  .palace .pos .p6.isClick img{max-width: 22px;}
+  .palace .pos .p7.isClick img{max-width: 36px;}
+
+   .palace .iboxs{position: absolute; width: 100%; bottom: 5px; left: 0; text-align: center; font-size: 0; *word-spacing: -1px; z-index: 2;}
+  @media screen and (-webkit-min-device-pixel-ratio:0){
+    .palace .iboxs{letter-spacing: -5px;}
+  }
+  .palace .iboxs li{display: inline-block; *display: inline; *zoom:1; vertical-align: top; font-size: 12px; letter-spacing: normal; word-spacing: normal; }
+  .palace .iboxs div{width: 50px; height: 50px; border-radius: 4px; background: #000; background: rgba(0,0,0,0.6); margin:0 35px; border: 5px solid #D91717; border:5px solid rgba(217,23,23,0.5);  background-clip: padding-box;}
+
+  .palace .second{position: absolute;
+    text-align: center;
+    width: 25%;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); font-size: 60px; color: #831010; line-height: 1; font-family: Arial; z-index: 201; text-shadow:0 0 8px #cf1e1e; 
+  }
+  .palace .shadowbg{ position: absolute; left: 0; z-index: 3; top:-20px; width: 100%; height: 100%; bottom: -40px; padding-bottom: 40px; -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=1,startColorstr=#7F000000,endColorstr=#7F000000)";  
+     filter: progid:DXImageTransform.Microsoft.gradient(GradientType=1,startColorstr=#7F000000, endColorstr=#7F000000); }
+  :root .palace .shadowbg{-webkit-filter:none;filter:none; background: #000; background:rgba(0,0,0,0.5); }
+/*   .palace .shadowbg:before{position: absolute; z-index: 203; width: 100%; height: 100%; left: 0; top: 0; content: "";}*/
+  .palace .palacebg{width: 100%; height: auto; }
+  .palace .scanBox{}
+  .palace .scanline{margin-top:-20px; height: 40px; width:100%; }
+  .lose-game{width:329px; height: 339px; left: 776px; top: 376px; width: 17.13541666666667%; height: 35.3125%; left: 40.41666666666667%; top: 32.70833333333333%; position: absolute; z-index: 202; display: none;}
+  .lose-game img{max-width: 100%; height: auto; }
